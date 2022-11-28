@@ -1,0 +1,24 @@
+<html ng-app="app">
+    <head>
+        <title>Angular Event</title>
+        <style>
+            h1 {
+                width: 300px;
+                border-style: dotted;
+            }
+        </style>
+    </head>
+    <body>
+        <div ng-controller="MouseController as mouseControl">
+            <h1 ng-mousedown=   "mouseControl.mouseDown()">MouseDown</h1>
+            <h1 ng-mouseup=     "mouseControl.mouseUp()">MouseUp</h1>
+            <h1 ng-mouseenter=  "mouseControl.mouseEnter()">MouseEnter</h1>
+            <h1 ng-mouseleave=  "mouseControl.mouseLeave()">MouseLeave</h1>
+            <h1 ng-mousemove=   "mouseControl.mouseMove()">MouseMove</h1>
+            <h1 ng-mouseover=   "mouseControl.mouseOver()">MouseOver</h1>
+        </div>
+            <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+            <script src="js/app/app.js"             type="application/javascript"></script>
+        </div>
+    </body>
+</html>

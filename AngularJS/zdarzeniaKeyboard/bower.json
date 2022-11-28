@@ -1,0 +1,21 @@
+{
+  "name": "zdarzeniaKeyboard",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "bartosz.gurgul"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.8.2"
+  }
+}

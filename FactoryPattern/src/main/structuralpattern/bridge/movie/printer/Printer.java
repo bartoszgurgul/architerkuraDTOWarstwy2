@@ -1,0 +1,16 @@
+package main.structuralpattern.bridge.movie.printer;
+
+import main.structuralpattern.bridge.movie.Detail;
+import main.structuralpattern.bridge.movie.formatter.Formatter;
+
+import java.util.List;
+
+public abstract class Printer {
+    public String print(Formatter formatter){
+        return formatter.format(getHeader(), getDetails());
+    }
+
+    protected abstract List<Detail> getDetails();
+
+    protected abstract String getHeader();
+}

@@ -1,0 +1,47 @@
+<html ng-app="app">
+     <head>
+         <h1>Angular Events</h1>
+     </head>
+     
+     <body>
+        <h1>List of directives</h1> 
+        <div ng-controller="HrefController as ctrl">
+            <a ng-href="https://www.youtube.com/watch?v={{ctrl.movies[0]}}">Java Rap</a>
+            <br />
+            <a ng-href="https://www.youtube.com/watch?v={{ctrl.movies[1]}}">Java is what Java does</a>
+            <br />
+            <img ng-src="{{ctrl.imgSrc}}">
+        </div>
+
+        <div ng-controller="ShowHideController as ctrl">
+            <input type="text" ng-model="ctrl.text">
+            <p ng-show="ctrl.text.length">Wprowadzony text: {{ctrl.text}}</p>
+            <br />
+            Checkbox:<input type="checkbox" ng-model="ctrl.check">
+            <p ng-show="ctrl.check">Pokaż</p>
+            <p ng-hide="ctrl.check">Ukryj</p>
+        </div>
+
+        <div ng-controller="RepeatController as ctrl">
+            <h1>All names:</h1>
+            <table border="1">
+                <thead >
+                    <tr>
+                        <th>First name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="p in ctrl.people">
+                        <td>{{p.firstName}}</td>
+                        <td>{{p.lastName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+         <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+         <script src="js/app/app.js" type="application/javascript"></script>
+     </body>
+ </html>
